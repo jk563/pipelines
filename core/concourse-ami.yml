@@ -11,3 +11,11 @@ jobs:
   plan:
     - get: concourse-packer
       trigger: true
+    - task: tester
+      config:
+          platform: linux
+          image_resource:
+            type: registry-image
+            source: { repository: busybox }
+          run:
+            path: ls
