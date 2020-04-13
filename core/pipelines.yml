@@ -18,20 +18,3 @@ resources:
     - name: main
       username: jamie
       password: norbit
-
-jobs:
-- name: update-pipelines
-  public: true
-  plan:
-    - get: pipelines
-      trigger: true
-    - put: concourse-pipelines
-      params:
-        pipelines:
-        - name: Pipelines
-          team: main
-          config_file: pipelines/core/pipelines.yml
-        - name: ContainerFly
-          team: main
-          config_file: pipelines/other/container-fly.yml
-
