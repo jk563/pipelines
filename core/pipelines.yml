@@ -2,7 +2,7 @@ resources:
 - name: pipelines
   type: git
   source:
-    uri: git@github.com:jk563/pipelines.git
+    uri: https://github.com/jk563/pipelines.git
     branch: master
 
 jobs:
