@@ -17,6 +17,10 @@ jobs:
         image_resource:
           type: docker-image
           source: {repository: busybox}
+        inputs:
+        - name: pipelines
         run:
-          path: echo
-          args: [hello world]
+          dir: pipelines
+          path: cat
+          args: [core/pipelines.yml]
+          
