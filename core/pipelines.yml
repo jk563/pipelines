@@ -31,4 +31,7 @@ jobs:
         - name: Pipelines
           team: main
           config_file: pipelines/core/pipelines.yml
+        - name: ContainerFly
+          team: main
+          config_file: pipelines/other/container-fly.yml
 
