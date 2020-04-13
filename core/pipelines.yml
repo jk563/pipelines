@@ -31,3 +31,6 @@ jobs:
         - name: Pipelines
           team: main
           config_file: pipelines/core/pipelines.yml
+        - name: Concourse
+          team: main
+          config_file: pipelines/core/concourse-ami.yml

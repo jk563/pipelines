@@ -1,0 +1,13 @@
+resources:
+- name: concourse-packer
+  type: git
+  source:
+    uri: https://github.com/jk563/concourse-packer.git
+    branch: master
+
+jobs:
+- name: create-concourse-amis
+  public: true
+  plan:
+    - get: concourse-packer
+      trigger: true
