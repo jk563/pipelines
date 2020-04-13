@@ -21,6 +21,5 @@ jobs:
         - name: pipelines
         run:
           dir: pipelines
-          path: cat
-          args: [core/pipelines.yml]
+          path: ls
           
