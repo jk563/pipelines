@@ -11,11 +11,15 @@ jobs:
   plan:
     - get: concourse-packer
       trigger: true
-    - task: tester
+    - task: build-ami
       config:
           platform: linux
           image_resource:
             type: registry-image
-            source: { repository: busybox }
+            source: { repository: hashicorp/packer }
+          inputs:
+          - name: concourse-packer
           run:
-            path: ls
+            dir: concourse-packer
+            path: packer
+            args: [build, concourse.json]
