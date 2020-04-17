@@ -21,7 +21,4 @@ jobs:
           - name: concourse-packer
           run:
             dir: concourse-packer
-            path: packer
-            args: [build, concourse.json]
-          params:
-            PACKER_CONCOURSE_GIT_REF: concourse-packer/.git/ref
+            path: make
