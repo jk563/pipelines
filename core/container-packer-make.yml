@@ -9,7 +9,7 @@ resources:
   source:
     repository: jk563.packer-make
     username: {{dockerhub_username}}
-    password: {{docerhub_password}}
+    password: {{dockerhub_password}}
 
 jobs:
 - name: build-container
