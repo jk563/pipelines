@@ -1,0 +1,21 @@
+resources:
+- name: container-packer-make
+  type: git
+  source:
+    uri: https://github.com/jk563/container-packer-make.git
+    branch: master
+- name: packer-make-image
+  type: docker-image
+  source:
+    repository: jk563.packer-make
+    username: {{dockerhub_username}}
+    password: {{docerhub_password}}
+
+jobs:
+- name: build-container
+  public: true
+  plan:
+    - get: container-packer-make
+      trigger: true
+    - put: packer-make-image
+      params: {build: container-packer-make}

@@ -36,3 +36,7 @@ jobs:
           team: main
           config_file: pipelines/core/concourse-ami.yml
           unpaused: true
+        - name: Packer Make
+          team: main
+          config_file: pipelines/core/container-packer-make.yml
+          unpaused: true
