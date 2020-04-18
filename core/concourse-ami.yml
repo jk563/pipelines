@@ -16,7 +16,7 @@ jobs:
           platform: linux
           image_resource:
             type: registry-image
-            source: { repository: hashicorp/packer }
+            source: { repository: jk563/packer-make }
           inputs:
           - name: concourse-packer
           run:
